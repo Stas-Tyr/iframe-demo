@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Demo Overlay Button</title>
+    <style>
+        /* Ensure the iframe covers the entire area */
+        #IframeDisplayElement {
+            width: 100%;
+            height: 100vh;
+            border: none;
+            position: relative; /* Relative position to allow absolute positioning of the button */
+        }
+
+        /* Style for the overlay button */
+        .book-demo-button {
+            position: absolute;
+            top: 20px; /* Position the button in the top right corner */
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            z-index: 1000; /* Ensure the button is on top of the iframe */
+            text-decoration: none; /* Remove underline from the link */
+            display: inline-block; /* Ensure the button displays correctly */
+        }
+
+        /* Hover effect for the button */
+        .book-demo-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The iframe element -->
+<iframe id="IframeDisplayElement" src="https://oneclick.si/"></iframe>
+
+<!-- The "Book a Demo" button overlay -->
+<a href="https://api.oneclick.si/widget/bookings/oneclick" class="book-demo-button">Book a Demo Now</a>
+
+</body>
+</html>
